@@ -2,7 +2,7 @@
   <div>
     <md-toolbar >
       <h3 class="md-title" style="flex: 1">What's New</h3>
-      <md-button class="md-icon-button">
+      <md-button class="md-icon-button" @click="navigateTo">
         <md-icon>forward</md-icon>
         <md-tooltip>我的Github</md-tooltip>
       </md-button>
@@ -36,6 +36,11 @@ export default {
     Other,
   },
   name: 'whatsnew',
+  methods:{
+    navigateTo: function(){
+      window.open("https://github.com/recallhyx/whats-new",'__blank');
+    }
+  }
 }
 </script>
 

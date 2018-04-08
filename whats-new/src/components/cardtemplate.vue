@@ -43,7 +43,6 @@ export default {
   props:['cardData'],
   methods:{
     navigateTo: function(){
-      console.log(this.carddata.url);
       window.open(this.carddata.url,'__blank');
     }
   },
