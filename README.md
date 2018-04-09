@@ -6,10 +6,17 @@
 **注意：要在 `constant` 文件中的 `constant.js` 的 `CONSTANT_TOKEN` 改为自己的Github Access_Token**
 
 第一步
+
 `git clone https://github.com/recallhyx/whats-new.git`
+
 第二步
+
 `cd whats-new`
+
 第三步
+
 `npm install`
+
 第四步
+
 `npm run start`
