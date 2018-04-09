@@ -26,13 +26,13 @@ export default {
 }
 </script>
 
-<style>
-  /* 引入 Material Icons*/
+<style lang="scss" scoped="">
+
   @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(./assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    src: url(./assets/fonts/iconfont.woff2) format('woff2');
   }
 
   .material-icons {
