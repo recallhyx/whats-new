@@ -16,12 +16,17 @@ export const toCardDataWithOwner = obj => {
       item.version = "暂无数据";
       item.updatetime = "暂无数据";
       item.url = obj.data.repositoryOwner.url;
+      item.isNew = false;
     }else{
       let node = edges[i].node.releases.edges[0].node;
       item.version = node.tag.name;
       item.url = node.url;
       item.updatetime = node.updatedAt;
-
+      let timestamp = Date.parse(node.updatedAt);
+      let now = Date.parse(new Date());
+      if(now-timestamp<3600*24*7*1000){
+        item.isNew = true;
+      }
     }
     cardData.push(item);
   }
@@ -44,10 +49,16 @@ export const toCardDataOnlyRepository = obj =>{
     item.version = "暂无数据";
     item.updatetime = "暂无数据";
     item.url = repository.owner.url;
+    item.isNew = false;
   }else{
     item.version = edges[0].node.tag.name;
     item.updatetime = edges[0].node.updatedAt;
     item.url = edges[0].node.url;
+    let timestamp = Date.parse(edges[0].node.updatedAt);
+    let now = Date.parse(new Date());
+    if(now-timestamp<3600*24*7*1000){
+      item.isNew = true;
+    }
   }
 
   return item;

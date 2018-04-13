@@ -17,7 +17,9 @@
           </md-card-media>
         </md-card-header>
         <md-card-content>
-          <div>最新版本: {{carddata.version}}</div>
+          <div>最新版本: {{carddata.version}}
+            <span class="new" v-if="carddata.isNew">new</span>
+          </div>
           <div>更新时间: {{carddata.updatetime | formatTime}}</div>
         </md-card-content>
       </md-ripple>
@@ -70,5 +72,12 @@ export default {
     margin: 6px;
     display: inline-block;
     vertical-align: top;
+  }
+  .new{
+    background-color: red;
+    color: white;
+    padding-left:3px;
+    padding-right:3px;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
   }
 </style>

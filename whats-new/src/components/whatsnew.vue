@@ -7,14 +7,12 @@
         <md-tooltip>我的Github</md-tooltip>
       </md-button>
     </md-toolbar>
-
     <Vuejs></Vuejs>
     <facebook></facebook>
     <angular></angular>
     <BootStrap></BootStrap>
     <Other></Other>
-  </div>
-
+    </div>
 </template>
 
 <script>
